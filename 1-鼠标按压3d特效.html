@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body {
+			perspective: 3000px;
+
+		}
+		div {
+			text-align: center;
+			font-size: 100px;
+			transform-style: preserve-3d;
+		}
+		#test1 {
+			-webkit-transform: translateZ(100px);
+		}
+		#test2 {
+			-webkit-transform: translateZ(50px);
+			color: red;
+		}
+		#pic {
+			width: 1200px;
+			height: 600px;
+			margin: 40px auto;
+			transition: 0.1s;
+			background: url("https://placehold.it/1200x600") no-repeat;
+		}
+		#pic:hover {
+			box-shadow: 10px 10px 20px rgba(0,0,0,0.5),
+			-10px -10px 20px rgba(0,0,0,0.5);
+		}
+	</style>
+</head>
+<body>
+	<div id="pic">
+		<div id="test1">FIRST LAYER</div>
+		<div id="test2">SECOND LAYER</div>
+	</div>
+	<script>
+		var pic = document.getElementById("pic");
+
+		pic.onmousemove = function(event) {
+			// mouse coord relative to window
+			var x = event.clientX, y = event.clientY,
+
+				// rotate origin coordinate relative to window
+				picX = pic.offsetWidth/2 + pic.getBoundingClientRect().left,
+				picY = pic.offsetHeight/2 + pic.getBoundingClientRect().top,
+
+				// mouse coordinate relative to rotate origin
+				paramX = x - picX, 
+				paramY = y - picY,
+
+				// rotate angle
+				angleY = Math.abs(paramX/pic.offsetWidth/2 * 30),
+				angleX = Math.abs(paramY/pic.offsetHeight/2 * 30);
+
+			if (paramX>=0) angleY = angleY;
+			else angleY = -1 * angleY;
+
+			if (paramY>=0) angleX = -1 * angleX;
+			else angleX = angleX;
+
+			pic.style.webkitTransform = "rotateX(" + angleX + "deg) rotateY(" + angleY + "deg)";
+
+		}
+
+		pic.onmouseout = function() {
+			pic.style.webkitTransform = "rotateX(0) rotateY(0)";
+		}
+	</script>
+</body>
+<!--
+-- +-
+-+ ++
+
+
+deg:	+-	++
+		--	-+	
+-->
+
+</html>

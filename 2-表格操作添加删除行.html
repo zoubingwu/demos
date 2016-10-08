@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		var arr = new Array();
+		function addMore() {
+			var tab = document.getElementById("myTab");
+			tr = tab.insertRow(-1);
+			td0 = tr.insertCell(-1); 
+			td1 = tr.insertCell(-1); 
+			td2 = tr.insertCell(-1); 
+			tr[0] = td0;
+			tr[1] = td1;
+			tr[2] = td2;
+			arr[arr.length] = tr;
+			td0.innerHTML = (arr.length - 1) * 3 + 1;
+			td1.innerHTML = (arr.length - 1) * 3 + 2;
+			td2.innerHTML = (arr.length - 1) * 3 + 3;
+		}
+		function removeLast() {
+			var tab = document.getElementById("myTab");
+			tab.deleteRow(-1);
+			arr = arr.slice(0,arr.length-1);
+			console.log(arr);
+		}
+	</script>
+	<style type="text/css">
+		td {
+			height: 30px;
+			width: 50px;
+			background-color: lightgray;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="add more" onclick="addMore()">
+	<input type="button" value="remove last row" onclick="removeLast()">
+	<table id="myTab">
+		
+	</table>
+</body>
+</html>
