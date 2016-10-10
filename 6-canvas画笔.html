@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		canvas {
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="myCanvas" width="1200" height="600"></canvas>
+	<script>
+		var canvas = document.getElementById("myCanvas");
+		var ctx = canvas.getContext("2d");
+		canvas.onmousedown = function(e){
+			var x = e.clientX - canvas.getBoundingClientRect().left;
+			var y = e.clientY - canvas.getBoundingClientRect().top;
+			ctx.beginPath();
+			ctx.moveTo(x,y);
+			canvas.onmousemove = function(event){
+				var x = event.clientX - canvas.getBoundingClientRect().left;
+				var y = event.clientY - canvas.getBoundingClientRect().top;
+				ctx.lineTo(x,y);
+				ctx.stroke();
+			}
+			canvas.onmouseup = function(event){
+				canvas.onmousemove = null;
+				canvas.onmousup = null;
+			}
+		} 
+	</script>
+</body>
+</html>
