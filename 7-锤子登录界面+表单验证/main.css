@@ -1,0 +1,283 @@
+.wrapper {
+	background: url(img/bg_login.png);
+	background-repeat: repeat;
+	background-size: 100px;
+	min-height: 800px;
+	min-width: 630px;
+	border: 1px solid transparent;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+.dialog {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 450px;
+	border: 1px solid #dadada;
+	border-radius: 10px;
+	margin-left: -225px;
+	margin-top: -324px;
+	box-shadow: 0 9px 30px -6px rgba(0,0,0,.2),
+				0 18px 20px -10px rgba(0,0,0,.04),
+				0 18px 20px -10px rgba(0,0,0,.04),
+				0 10px 20px -10px rgba(0,0,0,.04);
+	background: url(img/bg_dialog.png) #fff bottom repeat-x;
+}
+.title {
+	height: 92px;
+	margin: 23px 0 50px;
+	padding: 75px 0 0;
+	background: url(img/login_log.png);
+	background-repeat: no-repeat;
+	background-position: top center;
+	position: relative;
+}
+.dialog h4 {
+	color: #333;
+	font-weight: 400;
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	height: auto;
+	line-height: 1em;
+	bottom: 0;
+	font-size: 20px;
+	vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+}
+.content {
+	padding: 0 40px 22px;
+	height: auto;
+}
+.input {
+	opacity: 0.618;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	height: 46px;
+	line-height: 46px;
+	background: #fff;
+    box-shadow: 0 3px 5px -4px rgba(0,0,0,.4) inset,
+			    -1px 0 3px -2px rgba(0,0,0,.1) inset;
+    font-size: 18px;
+    transition: opacity 0.3s ease-in;
+    -webkit-transition: opacity 0.3s ease-in;
+    margin-bottom: 15px;
+    position: relative;
+}
+.icon {
+	background: -webkit-linear-gradient(#f8f8f8,#fafafa);
+    border-radius: 6px 0 0 6px;
+    border-right: solid 1px #ccc;
+    box-shadow: 1px 0 3px -1px rgba(0,0,0,.1);
+    float: left;
+    height: 46px;
+    width: 46px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.icon i {
+	text-indent: -9999em;
+	width: 46px;
+	height: 46px;
+	display: block;
+}
+.icon i.num {
+	background: url(img/dialog-input-icons.png) no-repeat;
+}
+.icon i.pw {
+	background: url(img/dialog-input-icons.png) no-repeat;
+	background-position: -47px 0;
+}
+.input input {
+	width: 270px;
+	border: none;
+	color: #333;
+	height: 33px;
+	padding: 5px 15px;
+	outline: none;
+	font-size: 16px;
+}
+.input input::-webkit-input-placeholder {
+	color: #bebebe;
+	font-size: 16px;
+}
+.warning {
+	background: #d16d62;
+    border-radius: 4px;
+    color: #fff;
+    display: none;
+    font-size: 12px;
+    font-weight: 400;
+    height: 26px;
+    line-height: 26px;
+    margin: 10px 0 0;
+    padding: 0 10px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    z-index: 10;
+}
+.remember {
+	color: #999;
+	font-size: 12px;
+	margin: 15px 5px 25px;
+	height: 12px;
+	line-height: 12px;
+	width: 370px;
+}
+.auto {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	padding-left: 22px;
+}
+.checkbox {
+	background: url(img/checkbox.png) no-repeat;
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	top: -4px;
+	left: -2px;
+}
+.checkbox.disabled {
+	background-position: 0 -18px;			
+}
+.checkbox.active {
+	background-position: 0 2px;			
+}
+.remember>a {
+	color: #5079d9;
+	text-decoration: none;
+	float: right;
+}
+.remember>a:last-child {
+	margin-right: 8px;
+	padding-right: 8px;
+	border-right: 1px solid #ccc;
+}
+.btn {
+	margin: 30px 0;
+	padding: 0;
+	height: 46px;
+}
+.btn button {
+    background: linear-gradient(#6f97e5,#527ed9);
+    box-shadow: inset 0 1px 2px #7ea1e8;
+    text-shadow: #4f70b3 0 -1px 0;
+    height: 46px;
+    width: 368px;
+    line-height: 46px;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    color: #fff;
+    display: block;
+    font-size: 18px;
+}
+.btn button.disabled {
+	opacity: 0.4;
+	cursor: not-allowed;
+	pointer-events: none;			
+}
+.btn button.active {
+	opacity: 1;
+	cursor: pointer;
+}
+.info {
+	border-top: 1px solid #d9d9d9;
+	font-size: 14px;
+	padding-top: 23px;
+	margin: 30px 0 0;
+	position: relative;
+	height: 18px;
+}
+.info ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.info li {
+	float: left;
+	background: url(img/login_icons.png) no-repeat;
+	width: 20px;
+	height: 17px;
+	font-size: 12px;
+	margin-left: 15px;
+	cursor: pointer;
+}
+.info li.text {
+	background-image: none;
+	color: #999;
+	width: auto;
+	margin-left: 0;
+	cursor: default;
+}
+.info li.wechat {
+	background-position: 1px 0;
+	margin-left: 10px;
+}
+.info li.weibo {
+
+	background-position: -30px 0;
+}
+.info li.qq {
+	background-position: -62px 0;
+}
+.info li.interphone {
+	background-image: none;
+	color: #999;
+	width: auto;
+	float: right;
+	cursor: pointer;
+}
+.info li.interphone:hover {
+	color: #5079d9;
+    transition: all .3s ease;
+}
+.copyright {
+	width: 100%;
+	font-size: 12px;
+	padding: 0 0 60px;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+}
+.footer {
+	margin: 0 auto;
+}
+.footer h2 {
+	font-size: 13px;
+	height: 15px;
+	line-height: 15px;
+	font-weight: normal;
+	color: #757575;
+	margin: 0;
+	padding: 0;
+}
+.footer a {
+	text-decoration: none;
+	color: #5079d9;
+}
+.footer a:hover {
+	color: #406dd6;
+}
+.footer a:visited {
+	color: #5079d9;
+}
+.footer span a{
+	display: inline-block;
+	padding: 1px 10px 0;
+	margin-left: 9px;
+	border-left: 1px solid #ccc;
+}
+.footer h4 {
+	font-weight: normal;
+	font-size: 13px;
+	margin: 0;
+	padding: 10px 0 0;
+}
