@@ -1,0 +1,27 @@
+body {
+	perspective: 3000px;
+
+}
+div {
+	text-align: center;
+	font-size: 100px;
+	transform-style: preserve-3d;
+}
+#test1 {
+	-webkit-transform: translateZ(100px);
+}
+#test2 {
+	-webkit-transform: translateZ(50px);
+	color: red;
+}
+#pic {
+	width: 1200px;
+	height: 600px;
+	margin: 40px auto;
+	transition: 0.1s;
+	background-color: #ccc;
+}
+#pic:hover {
+	box-shadow: 10px 10px 20px rgba(0,0,0,0.5),
+	-10px -10px 20px rgba(0,0,0,0.5);
+}
