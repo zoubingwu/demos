@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<style type="text/css">
+		#wrap {
+	    float: left;
+	    height: 320px;
+	    overflow: hidden;
+	    position: relative;
+	    width: 550px;
+	}
+	#wrap img {
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	}
+	#wrap div {
+	    bottom: 0;
+	    overflow: hidden;
+	    position: absolute;
+	    float: left;
+	}
+	#wrap div a {
+	    background-color: #444444;
+	    color: #FFFFFF;
+	    display: inline-block;
+	    float: left;
+	    height: 32px;
+	    margin-right: 1px;
+	    overflow: hidden;
+	    padding: 5px 15px;
+	    text-align: center;
+	    width: 79px;
+	}
+	#wrap div a:hover {
+	    text-decoration: none;
+	}
+	#wrap div a em {
+	    cursor: pointer;
+	    display: block;
+	    height: 16px;
+	    overflow: hidden;
+	    width: 79px;
+	}
+	#wrap .last {
+	    margin: 0;
+	    width: 80px;
+	}
+	#wrap>div>a.active {
+		background-color: #37A7D7;
+	}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<a href="#nogo" id="container">
+			<img src="images/1.jpg" alt="相约情人节"/>
+			<img src="images/2.jpg" alt="新款上线"/>
+			<img src="images/3.jpg" alt="愤怒小鸟特卖"/>
+			<img src="images/4.jpg" alt="男鞋促销第一波"/>
+			<img src="images/5.jpg" alt="春季新品发布"/>
+		</a>
+		<div>
+			<a href="#" title="1"><em>相约情人节</em><em>全场119元起</em></a>
+			<a href="#" title="2"><em>新款上线</em><em>全场357元起</em></a>
+			<a href="#" title="3"><em>愤怒小鸟特卖</em><em>全场89元</em></a>
+			<a href="#" title="4"><em>男鞋促销第一波</em><em>全场3.1折起</em></a>
+			<a href="#" title="5" class="last"><em>春季新品发布</em><em>全场4.1折起</em></a>
+		</div>
+	</div>
+</body>
+</html>
