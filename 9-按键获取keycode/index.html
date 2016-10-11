@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		h1 {
+			text-align: center;
+		}
+		pre {
+			border: 1px dashed #ccc;
+		}
+	</style>
+</head>
+<body>
+	<pre>
+		&lt;script&gt;
+			window.onload = function(){
+				var text = document.getElementsByTagName("h1")[0];
+				document.onkeydown = function(event){
+					var event = event || window.event;
+					text.innerHTML = event.keyCode;
+					return false;
+				}
+			}
+		&lt;/script&gt;
+	</pre>
+	<h1>Your keycode shows here</h1>
+
+</body>
+<script>
+	window.onload = function(){
+		var text = document.getElementsByTagName("h1")[0];
+		document.onkeydown = function(event){
+			var event = event || window.event;
+			text.innerHTML = event.keyCode;
+			return false;
+		}
+	}
+</script>
+</html>
