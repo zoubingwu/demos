@@ -6,13 +6,13 @@ window.onload = function(){
 		var x = event.clientX - box.offsetLeft;
 		var y = event.clientY - box.offsetTop;
 
-		bar.onmousemove = function(e){
+		window.onmousemove = function(e){
 			box.style.left =  (e.clientX - x) + "px";
 			box.style.top = (e.clientY - y) + "px";
 		}
-		bar.onmouseup = function(e){
-			bar.onmousemove = null;
-			bar.onmouseup = null;
+		window.onmouseup = function(e){
+			window.onmousemove = null;
+			window.onmouseup = null;
 		}
 	}
 

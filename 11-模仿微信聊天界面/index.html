@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>wechat</title>
+	<style>
+		body {background-color: #eee;}
+		.fl {float: left;}  
+		.fr {float: right;}
+		#main {
+			margin-bottom: 100px;
+		}
+		#main:after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+		section {
+			width: 100%;
+			margin-top: 10px;
+		}
+		.msg, .content {
+			min-height: 40px;
+			position: relative;
+		}
+		.avatar {
+			height: 40px;
+			width: 40px;
+			overflow: hidden;
+		}
+		.avatar img {
+			height: 40px;
+			width: 40px;
+		}
+		.content {
+			line-height: 40px;
+			margin: 0 30px;
+			padding: 0 10px;
+			border-radius: 5px;
+			max-width: 50%;
+		}
+		.me {
+			background-color: #a0e75a;
+		}
+		.oppo {
+			background-color: #fff;
+		}
+		.oppo:before {
+			content: "";
+			width: 0;
+			height: 0;
+			border: 10px solid transparent;
+			position: absolute;
+			top: 10px;
+			left: -20px;
+			border-right-color: #fff;
+		}
+		.me:after {
+			content: "";
+			width: 0;
+			height: 0;
+			border: 10px solid transparent;
+			position: absolute;
+			top: 10px;
+			right: -20px;
+			border-left-color: #a0e75a;
+		}
+		.text {
+			position: fixed;
+			width: 100%;
+			background-color: #f6f6f6;
+			text-align: center;
+			left: 0;
+			bottom: 0;
+			padding: 20px;
+		}
+		.btn {
+			width: 10%;
+			height: 30px;
+			background-color: #a0e75a;
+			border-color: #a0e75a;
+			border-radius: 5px;
+			outline: none;
+		}
+		.message {
+			width: 60%;
+			height: 30px;
+			line-height: 30px;
+			border: 1px solid #ccc;
+			border-radius: 6px;
+			outline: 0px;
+		}
+	</style>
+</head>
+<body>
+	<div class="chat" id="main">
+		<section class="opposite msg fl">
+			<div class="avatar fl"><img src="img/star1.png" alt=""></div>
+			<div class="content oppo fl">hey there how ya doing?</div>
+		</section>
+		<section class="myself msg fr">
+			<div class="avatar fr"><img src="img/star.gif" alt=""></div>
+			<div class="content me fr">nah not bad, how about ya m8?</div>
+		</section>
+	</div>
+	<div class="text">
+		<input type="text" class="message" id="texto" autofocus>
+		<input type="button" value="SEND" class="btn" onclick="send()">
+		<!-- <input type="button" value="WTF" class="btn"> -->
+	</div>
+</body>
+<script>
+	function send(){
+		var texto = document.getElementById("texto");
+		if(texto.value !== ""){
+			var sec = document.createElement("section");
+			var img = document.createElement("img");
+			var divAvatar = document.createElement("div");
+			var divContent = document.createElement("div");
+
+			img.src = "img/star.gif";
+			sec.className = "myself msg fr";
+			divAvatar.className = "avatar fr";
+			divContent.innerHTML = texto.value;
+			divContent.className = "content me fr";
+
+			divAvatar.appendChild(img);
+			sec.appendChild(divAvatar);
+			sec.appendChild(divContent);
+			document.getElementById("main").appendChild(sec);
+			
+			sec.scrollIntoView({block: "end", behavior: "smooth"});
+			texto.value = "";
+			texto.focus();
+		}
+	}
+	document.onkeyup = function(event){
+		if(event.keyCode === 13) {
+			send();
+			return false;
+		}
+	}
+</script>
+</html>
