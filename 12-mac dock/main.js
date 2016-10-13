@@ -17,8 +17,16 @@ window.onload = function(){
 			var x = event.clientX - imgs[i].offsetLeft - imgs[i].offsetWidth / 2;
 			var y = event.clientY - dock.offsetTop - imgs[i].offsetTop - imgs[i].offsetHeight / 2;
 
-			// 勾股定理算出鼠标到图片中心位置的距离，距离越远图片变化比例越小，距离越小图片变化比例越大
-			var scale = 1 - Math.sqrt(x*x + y*y) / 400;
+			// 第一种方式：勾股定理算出鼠标到图片中心位置的距离，距离越远图片变化比例越小，距离越小图片变化比例越大
+			// var scale = 1 - Math.sqrt(x * x + y * y) / 500;
+
+			// 第二种方式（mac实际上鼠标垂直移动不会放大图标）：图片添加transition属性使变化更平滑
+			// y轴方向变化不放大图标，垂直方向离图标超过一定距离时水平移动也没有效果。
+			if(Math.abs(y) < 100) {
+				var scale = 1 - Math.abs(x)/600;
+			} else {
+				scale = 0.5;
+			}
 
 			// 比例小于0.5即比初始的比例还小的让比例维持为0.5，以免使图片比初始更小
 			if (scale < 0.5) scale = 0.5;
