@@ -21,8 +21,8 @@ window.onload = function(){
 			// var scale = 1 - Math.sqrt(x * x + y * y) / 500;
 
 			// 第二种方式（mac实际上鼠标垂直移动不会放大图标）：图片添加transition属性使变化更平滑
-			// y轴方向变化不放大图标，垂直方向离图标超过一定距离时水平移动也没有效果。
-			if(Math.abs(y) < 100) {
+			// 鼠标在y轴方向上的位置变化不会放大图标，同时y轴方向离图标超过一定距离时鼠标水平移动不会触发放大镜效果。
+			if (Math.abs(y) < 100) {
 				var scale = 1 - Math.abs(x)/600;
 			} else {
 				scale = 0.5;
