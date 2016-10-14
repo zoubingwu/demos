@@ -25,7 +25,7 @@ window.onload = function(){
 			if (Math.abs(y) < 100) {
 				var scale = 1 - Math.abs(x)/600;
 			} else {
-				scale = 0.5;
+				var scale = 0.5;
 			}
 
 			// 比例小于0.5即比初始的比例还小的让比例维持为0.5，以免使图片比初始更小
