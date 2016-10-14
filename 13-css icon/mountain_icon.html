@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#rectangle {
+			height: 200px;
+			width: 400px;
+			border: 10px solid #ccc;
+			position: relative;
+		}
+		#circle {
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			background-color: #ccc;
+			position: absolute;
+			right: 40px;
+			top: 30px;
+		}
+		#triangle1 {
+			height: 0;
+			width: 0;
+			border-left: 60px solid transparent;
+			border-right: 120px solid transparent;
+			border-bottom: 120px solid #ccc;
+			position: absolute;
+			bottom: 20px;
+			left: 40px;
+		}
+		#triangle2 {
+			height: 0;
+			width: 0;
+			border-left: 40px solid transparent;
+			border-right: 80px solid transparent;
+			border-bottom: 80px solid #ccc;
+			position: absolute;
+			bottom: 20px;
+			left: 160px;
+
+		}
+	</style>
+</head>
+<body>
+	<div id="rectangle">
+		<div id="triangle1"></div>
+		<div id="triangle2"></div>
+		<div id="circle"></div>
+	</div>
+</body>
+</html>

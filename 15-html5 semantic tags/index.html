@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		header {
+			width: 800px;
+			height: 20px;
+			margin: auto;
+			font-size: 20px;
+		}
+		nav {
+			background-color: gray;
+			height: 40px;
+			width: 800px;
+			margin: auto;
+		}
+		nav li {
+			list-style: none;
+			float: left;
+			width: 120px;
+			line-height: 40px;
+			text-align: center;
+		}
+		nav li a {
+			width: 120px;
+			text-decoration: none;
+			color: white;
+			display: inline-block;
+		}
+		nav>ul>li>a:hover, .secondNav>li>a:hover {
+			color: gray;
+			background-color: white;
+		}
+		.secondNav {
+			position: absolute;
+			padding: 0;
+			display: none;
+		}
+		.secondNav>li {
+			clear: both;
+		}
+		.secondNav>li>a {
+			color: white;
+			width: 120px;
+			background-color: gray;
+		}
+		nav>ul>li:hover .secondNav{
+			display: block;
+		}
+		article {
+			width: 800px;
+			margin: auto;
+			height: 510px;
+		}
+		section {
+			width: 600px;
+			height: 100px;
+			float: left;
+		}
+		section h3 {
+			margin-top: 5px;
+			margin-bottom: 0;
+		}
+		section p {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		aside {
+			float: right;
+			width: 195px;
+		}
+		aside li {
+			height: 40px;
+			display: block;
+		}
+		footer {
+			width: 800px;
+			height: 50px;
+			margin: auto;
+			text-align: center;
+			background-color: lightgray;
+			border-top: 1px solid black;
+		}
+
+
+	</style>
+</head>
+<body>
+	<header>New Tags in HTML5</header>
+	<nav>
+		<ul>
+			<li><a href="#">nav1</a>
+				<ul class="secondNav">
+					<li><a href="#">secondNav</a></li>
+					<li><a href="#">secondNav</a></li>
+					<li><a href="#">secondNav</a></li>
+					<li><a href="#">secondNav</a></li>
+				</ul>
+			</li>
+			<li><a href="#">nav2</a>
+				<ul class="secondNav">
+					<li><a href="#">secondNav</a></li>
+					<li><a href="#">secondNav</a></li>
+					<li><a href="#">secondNav</a></li>
+					<li><a href="#">secondNav</a></li>
+				</ul>
+			</li>
+			<li><a href="#">nav3</a>
+				<ul class="secondNav">
+					<li><a href="#">secondNav</a></li>
+					<li><a href="#">secondNav</a></li>
+					<li><a href="#">secondNav</a></li>
+					<li><a href="#">secondNav</a></li>
+				</ul>
+			</li>
+			<li><a href="#">nav4</a>
+				<ul class="secondNav">
+					<li><a href="#">secondNav</a></li>
+					<li><a href="#">secondNav</a></li>
+					<li><a href="#">secondNav</a></li>
+					<li><a href="#">secondNav</a></li>
+				</ul>
+			</li>
+			<li><a href="#">nav5</a>
+				<ul class="secondNav">
+					<li><a href="#">secondNav</a></li>
+					<li><a href="#">secondNav</a></li>
+					<li><a href="#">secondNav</a></li>
+					<li><a href="#">secondNav</a></li>
+				</ul>
+			</li>
+			<li><a href="#">nav6</a>
+				<ul class="secondNav">
+					<li><a href="#">secondNav</a></li>
+					<li><a href="#">secondNav</a></li>
+					<li><a href="#">secondNav</a></li>
+					<li><a href="#">secondNav</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<article>
+		<section>
+			<h3>title1</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+		</section>
+		<aside>
+			<h3>aside info</h3>
+			<ul>
+				<li>aside info list goes here</li>
+				<li>aside info list goes here</li>
+				<li>aside info list goes here</li>
+				<li>aside info list goes here</li>
+				<li>aside info list goes here</li>
+				<li>aside info list goes here</li>
+				<li>aside info list goes here</li>
+				<li>aside info list goes here</li>
+				<li>aside info list goes here</li>
+			</ul>
+		</aside>
+		<section>
+			<h3>title1</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+		</section>
+		<section>
+			<h3>title1</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+		</section>
+		<section>
+			<h3>title1</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+		</section>
+		<section>
+			<h3>title1</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+		</section>
+		
+	</article>
+	<footer>
+		here goes footer and some links blablablablablablal
+	</footer>
+</body>
+</html>
