@@ -1,11 +1,14 @@
 var bg = document.getElementsByClassName("container")[0];
-var box = document.getElementsByClassName("outer")[0];
+
+var l1 = document.getElementsByClassName("outer")[0];
+var l2 = document.getElementsByClassName("outer")[0];
+var l3 = document.getElementsByClassName("outer")[0];
 
 
 bg.onmousemove = function(event) {
 	var x = event.clientX, y = event.clientY;
-	var oX = bg.offsetWidth/2 + bg.offsetLeft;
-	var oY = bg.offsetHeight/2 + bg.offsetTop;
+	var oX = bg.offsetWidth/2 + bg.getBoundingClientRect().top;
+	var oY = bg.offsetHeight/2 + bg.getBoundingClientRect().left;
 
 	var offsetX = Math.abs(x-oX) / (bg.offsetWidth/2) * 10;
 	var offsetY = Math.abs(y-oY) / (bg.offsetHeight/2) * 10;
@@ -22,7 +25,9 @@ bg.onmousemove = function(event) {
 	// layers
 	transX = offsetX * 2 + "px";
 	transY = offsetY * 2 + "px";
-	box.style.transform = "translateX(" + transX + ") translateY(" + transY + ")"
+	l1.style.transform = "translateX(" + transX + ") translateY(" + transY + ")"
+	l1.style.transform = "translateX(" + transX + ") translateY(" + transY + ")"
+	l1.style.transform = "translateX(" + transX + ") translateY(" + transY + ")"
 }
 bg.onmouseout = function() {
 	bg.style.backgroundPositionX = "50%";
