@@ -1,8 +1,8 @@
 var bg = document.getElementsByClassName("container")[0];
 
-var l1 = document.getElementsByClassName("outer")[0];
-var l2 = document.getElementsByClassName("outer")[0];
-var l3 = document.getElementsByClassName("outer")[0];
+var l1 = document.getElementsByClassName("l1")[0];
+var l2 = document.getElementsByClassName("l2")[0];
+var l3 = document.getElementsByClassName("l3")[0];
 
 
 bg.onmousemove = function(event) {
@@ -25,12 +25,14 @@ bg.onmousemove = function(event) {
 	// layers
 	transX = offsetX * 2 + "px";
 	transY = offsetY * 2 + "px";
-	l1.style.transform = "translateX(" + transX + ") translateY(" + transY + ")"
-	l1.style.transform = "translateX(" + transX + ") translateY(" + transY + ")"
-	l1.style.transform = "translateX(" + transX + ") translateY(" + transY + ")"
+	l1.style.transform = "translateX(" + transX + ") translateY(" + transY + ") translateZ(100px)"
+	l2.style.transform = "translateX(" + transX + ") translateY(" + transY + ") translateZ(200px)"
+	l3.style.transform = "translateX(" + transX + ") translateY(" + transY + ") translateZ(300px)"
 }
 bg.onmouseout = function() {
 	bg.style.backgroundPositionX = "50%";
 	bg.style.backgroundPositionY = "50%";
-	box.style.transform = "translateX(0) translateY(0)";
+	l1.style.transform = "translateX(0) translateY(0) translateZ(100px)";
+	l2.style.transform = "translateX(0) translateY(0) translateZ(200px)";
+	l3.style.transform = "translateX(0) translateY(0) translateZ(300px)";
 }
