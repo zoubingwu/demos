@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<pre>
+	&lt;script type="text/javascript"&gt;
+	<span>//求和</span>
+	Array.prototype.sum = function() {
+		var sum = 0;
+		for (var i = 0; i < this.length; i++) {
+			sum +=parseFloat(this[i]);
+		}
+		return sum;
+	}
+	<span>//求最大值</span>
+	Array.prototype.max = function() {
+		var maxValue = Number.MIN_VALUE;
+		for (var i = 0; i < this.length; i++) {
+			if (parseFloat(this[i]) > maxValue) {
+				maxValue = parseFloat(this[i]);
+			}
+		}
+		return maxValue;
+	}
+	<span>//应用</span>
+	var arr = [1,21,3,4,22,45,6,7,32];
+	console.log(arr.sum());<span> 和：141</span>
+	console.log(arr.max());<span> 最大数：45</span>
+	console.log(arr.sortAscendant());<span> 排序：[1, 3, 4, 6, 7, 21, 22, 32, 45]</span>
+	&lt;/script&gt;
+	</pre>
+
+</body>
+<script>
+	//求和
+	Array.prototype.sum = function() {
+		var sum = 0;
+		for (var i = 0; i < this.length; i++) {
+			sum +=parseFloat(this[i]);
+		}
+		return sum;
+	}
+
+	//求最大值
+	Array.prototype.max = function() {
+		var maxValue = Number.MIN_VALUE;
+		for (var i = 0; i < this.length; i++) {
+			if (parseFloat(this[i]) > maxValue) {
+				maxValue = parseFloat(this[i]);
+			}
+		}
+		return maxValue;
+	}
+
+	//从小到大排序
+	Array.prototype.sortAscendant = function() {
+		for(var i = 0;i < this.length - 1; i++) {
+			var isSorted = true;
+			for (var j = 0;j < this.length - 1 - i; j++) {
+				if (this[j] > this[j+1]) {
+					isSorted = false;
+					var temp = this[j];
+					this[j] = this[j + 1];
+					this[j + 1] = temp;
+				}
+			}
+			if (isSorted === true) {
+				break;
+			}
+		}
+		return this;
+	}
+
+	var arr = [1,21,3,4,22,45,6,7,32];
+	console.log(arr.sum());
+	console.log(arr.max());
+	arr = arr.sortAscendant();
+	console.log(arr);
+</script>
+</html>
