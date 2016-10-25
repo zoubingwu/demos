@@ -6,12 +6,13 @@ var l3 = document.getElementsByClassName("l3")[0];
 
 
 bg.onmousemove = function(event) {
+
 	var x = event.clientX, y = event.clientY;
 	var oX = bg.offsetWidth/2 + bg.getBoundingClientRect().top;
 	var oY = bg.offsetHeight/2 + bg.getBoundingClientRect().left;
 
-	var offsetX = Math.abs(x-oX) / (bg.offsetWidth/2) * 10;
-	var offsetY = Math.abs(y-oY) / (bg.offsetHeight/2) * 10;
+	var offsetX = Math.abs(x-oX) / (bg.offsetWidth/2) * 20;
+	var offsetY = Math.abs(y-oY) / (bg.offsetHeight/2) * 20;
 
 	if (x - oX > 0) offsetX = -1 * offsetX;
 	if (y - oY > 0) offsetY = -1 * offsetY;
