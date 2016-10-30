@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#slider_container img {
+			max-width: 850px;
+		}
+		#slider_container {
+		    padding: 10px;
+		    margin-top: 20px;
+		    width: 1000px;
+		    position: relative;
+		    /*border: 1px solid red;*/
+		    height: 500px;
+		}
+
+		#slider_container div {
+		    position: absolute;
+		    top: 0;
+		    left: 75px;
+		    opacity: 0;
+		    filter: alpha(opacity=0);
+		}
+		#slider_container div {
+		    -webkit-animation: round 20s linear infinite;
+		            animation: round 20s linear infinite;
+		}
+
+		@-webkit-keyframes round {
+		    5% {
+		        opacity: 1;
+		        filter: alpha(opacity=100);
+		        /* 0 - 1秒 淡入*/
+		    }
+		    25% {
+		        opacity: 1;
+		        filter: alpha(opacity=100);
+		        /* 1- 5秒靜止*/
+		    }
+		    30% {
+		        opacity: 0;
+		        filter: alpha(opacity=0);
+		        /* 5-6秒淡出*/
+		    }
+		}
+		@keyframes round {
+		    5% {
+		        opacity: 1;
+		        filter: alpha(opacity=100);
+		        /* 0 - 1秒 淡入*/
+		    }
+		    25% {
+		        opacity: 1;
+		        filter: alpha(opacity=100);
+		        /* 1- 5秒靜止*/
+		    }
+		    30% {
+		        opacity: 0;
+		        filter: alpha(opacity=0);
+		        /* 5-6秒淡出*/
+		    }
+		}
+		#slider_container div:nth-child(1) {
+		    -webkit-animation-delay: 0s;
+		            animation-delay: 0s;
+		}
+		#slider_container div:nth-child(2) {
+		    -webkit-animation-delay: 5s;
+		            animation-delay: 5s;
+		}
+		#slider_container div:nth-child(3) {
+		    -webkit-animation-delay: 10s;
+		            animation-delay: 10s;
+		}
+		#slider_container div:nth-child(4) {
+		    -webkit-animation-delay: 15s;
+		            animation-delay: 15s;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="slider_container">
+		    <div>
+		        <img src="images/m2.jpg">
+		    </div>
+		    <div>
+		        <img src="images/m1.png">
+		    </div>
+		    <div>
+		        <img src="images/m3.jpg">
+		    </div>
+		    <div>
+		        <img src="images/m4.jpg">
+		    </div>
+		</div>
+	</div>
+</body>
+</html>
