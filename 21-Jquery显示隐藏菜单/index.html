@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$("ul li:gt(5):not(:last)").hide();
+
+			var flag = true;
+			$(".showmore a").click(function(){
+				var $category = $("ul li:gt(5):not(:last)");
+				$category.slideToggle();
+
+				$("a:contains(canon), a:contains(casio), a:contains('fuji')").toggleClass("promoted");
+
+				if (flag){
+					flag = false;
+					$(".showmore a span").text("hide some");
+				} 
+				else {
+					flag = true;
+					$(".showmore a span").text("show all");
+				}
+				return false;
+			})
+		});
+	</script>
+	<style>
+		a {text-decoration: none;}
+		ul {list-style: none;}
+		li {float: left; width: 150px;height: 30px;margin-left: 5px;}
+		.subCategoryBox {width: 600px;height: 350px;border: 1px solid #000;}
+		.showmore {width: 100px;height: 30px;margin: auto;}
+		.showmore a {border: 1px solid gray;width: 150px;height: 25px;text-decoration: none;}
+		.promoted {color: red;}
+	</style>
+</head>
+<body>
+	<div class="subCategoryBox">
+		<ul>
+			<li><a href="#">canon</a><i>(30440)</i></li>
+			<li><a href="#">sony</a><i>(121441)</i></li>
+			<li><a href="#">samgsung</a><i>(24241)</i></li>
+			<li><a href="#">nikon</a><i>(19378)</i></li>
+			<li><a href="#">panasonic</a><i>(59378)</i></li>
+			<li><a href="#">casio</a><i>(12345)</i></li>
+			<li><a href="#">fuji</a><i>(23453)</i></li>
+			<li><a href="#">koda</a><i>(32134)</i></li>
+			<li><a href="#">benq</a><i>(2134)</i></li>
+			<li><a href="#">benq</a><i>(2134)</i></li>
+			<li><a href="#">benq</a><i>(2134)</i></li>
+			<li><a href="#">benq</a><i>(2134)</i></li>
+			<li><a href="#">benq</a><i>(2134)</i></li>
+			<li><a href="#">benq</a><i>(2134)</i></li>
+			<li><a href="#">benq</a><i>(2134)</i></li>
+			<li><a href="#">benq</a><i>(2134)</i></li>
+			<li><a href="#">benq</a><i>(2134)</i></li>
+			<li><a href="#">benq</a><i>(2134)</i></li>
+			<li><a href="#">benq</a><i>(2134)</i></li>
+			<li><a href="#">benq</a><i>(2134)</i></li>
+			<li><a href="#">benq</a><i>(2134)</i></li>
+			<li><a href="#">benq</a><i>(2134)</i></li>
+			<li><a href="#">benq</a><i>(2134)</i></li>
+			<li><a href="#">benq</a><i>(2134)</i></li>
+			<li><a href="#">benq</a><i>(2134)</i></li>
+			<li><a href="#">others</a><i>(92134)</i></li>
+		</ul>
+		<div class="showmore">
+			<a href=""><span>show all</span></a>
+		</div>
+	</div>
+</body>
+</html>
