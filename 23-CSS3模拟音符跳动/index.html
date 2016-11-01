@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3模拟音符跳动</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="music">
+		<i></i>
+		<i></i>
+		<i></i>
+		<i></i>
+		<i></i>
+	</div>
+	<button>Wave!</button>
+</body>
+<script>
+	$(function(){
+		$("button").click(function(){
+			$(".music").toggleClass("active");
+			
+			if ($(".music").hasClass("active")) {
+				$("button").text("Stop");
+			} else {
+				$("button").text("Wave");
+			}
+		})
+	})
+</script>
+</html>
