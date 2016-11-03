@@ -12,6 +12,7 @@ window.onload = function(){
 
 
 	window.onmousemove = function(event){
+		
 		for (var i = 0; i < imgs.length; i++) {
 			// 获得鼠标位置到每张图片中心部位的水平和垂直方向上的距离
 			var x = event.clientX - imgs[i].offsetLeft - imgs[i].offsetWidth / 2;
