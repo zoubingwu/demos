@@ -23,7 +23,6 @@
 		#calc ul li.btn-3{width:136px;}
 		#calc ul li.btn-3 a{width:136px;background-position:0 -82px;}
 		#calc ul li.btn-3 a:hover{background-position:0 -123px;}
-		#formula{position:absolute;top:20px;background:none;border:0;font:700 12px/1.5 Arial;width:280px;padding:3px 15px 0 5px;text-align:right;}
 	</style>
 </head>
 <body>
@@ -49,37 +48,67 @@
 	        <li class="btn-3"><a>0</a></li>
 	        <li><a>.</a></li>
 	    </ul>
-	    <input id="formula" type="text" readonly="readonly" value="" />
 	</div>
 
 </body>
 <script>
+window.onload = function() {
 	var btn = document.getElementsByTagName("a");
+	var displayBox = document.getElementsByTagName("input")[0];
+	var formula = document.getElementById("formula");
+
 
 	for ( var i = 0; i < btn.length; i++) {
+		btn[i].onfocus = function() {
+			this.blur();
+		}
 
-		btn[i].onclick = function () {
-			switch (this.innnerHTML) {
+		btn[i].onclick = function() {
+			switch (this.innerHTML) {
 				case "c":
-
-				case "+":
-
-				case "-":
-
-				case "÷":
-
-				case "×":
-
-				case "%":
-
+					displayBox.value = "0";
+					break;
 				case "=":
-
+					count(displayBox.value);
+					break;
+				case "+":
+				case "-":
+				case "÷":
+				case "×":
+				case "%":
+					if ( /[\+\-\×\%\÷]$/.test(displayBox.value) ){
+						break;
+					}
+				case ".":
+					if (displayBox.value.indexOf(".") < 0) {
+						displayBox.value += this.innerHTML;
+						break;
+					} else {
+						break;
+					}
 				default:
+					if ( displayBox.value.length < 10) {
+
+						if ( /^0\.\d/.test(displayBox.value) ) {
+							displayBox += this.innerHTML;
+						} else {
+							displayBox.value = (displayBox.value + this.innerHTML).replace(/^[0\%\/\*\-\+](\d)/, "$1"); 
+						}
+					}
 
 			}
 		}
 	}
 
+	function count(str) {
+		str = str.replace(/\÷/g, "/");
+		str = str.replace(/\×/g, "*");
+		displayBox.value = eval(str);
+	}
+
+
+
+}
 	
 </script>
 </html>
