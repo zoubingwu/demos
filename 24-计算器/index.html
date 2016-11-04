@@ -64,38 +64,37 @@ window.onload = function() {
 		}
 
 		btn[i].onclick = function() {
+			var show = displayBox.value;
 			switch (this.innerHTML) {
 				case "c":
 					displayBox.value = "0";
 					break;
 				case "=":
-					count(displayBox.value);
+					count(show);
 					break;
+				case ".":
+					if (show.indexOf(".") > 0) {
+						break;
+					}
 				case "+":
 				case "-":
 				case "÷":
 				case "×":
 				case "%":
-					if ( /[\+\-\×\%\÷]$/.test(displayBox.value) ){
-						break;
-					}
-				case ".":
-					if (displayBox.value.indexOf(".") < 0) {
-						displayBox.value += this.innerHTML;
-						break;
-					} else {
+					if ( /[\+\-\×\%\÷]$/.test(show) ){
 						break;
 					}
 				default:
-					if ( displayBox.value.length < 10) {
+					if ( show.length < 10 ) {
 
-						if ( /^0\.\d/.test(displayBox.value) ) {
-							displayBox += this.innerHTML;
+						show += this.innerHTML;
+						if( /^0\d/.test(show) ) {
+							displayBox.value = this.innerHTML;
 						} else {
-							displayBox.value = (displayBox.value + this.innerHTML).replace(/^[0\%\/\*\-\+](\d)/, "$1"); 
+							displayBox.value = show;
 						}
+						
 					}
-
 			}
 		}
 	}
