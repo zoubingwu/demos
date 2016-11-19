@@ -1,0 +1,107 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.chrome {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	margin: 100px auto;
+	overflow: hidden;
+}
+.chrome div {
+	position: absolute;
+}
+.chrome:before {
+	content: "";
+	position: absolute;
+	top: 95px;
+	left: 95px;
+	z-index: 100;
+	width: 110px;
+	height: 110px;
+	background-color: #fff;
+	border-radius: 50%;
+}
+.chrome:after {
+	content: "";
+	position: absolute;
+	top: 105px;
+	left: 105px;
+	z-index: 101;
+	width: 90px;
+	height: 90px;
+	background-color: #f00;
+	border-radius: 50%;
+	background: -webkit-gradient(linear, left top, left bottom, from(#80b1da), to(#165e98));
+}
+.red {
+	z-index: 3;
+	top: -44px;
+	left: 55px;
+	width: 200px;
+	height: 210px;
+	opacity: 0.94;
+	-webkit-transform: rotate(60deg);
+	border-bottom-right-radius: 30px;
+	background: -webkit-gradient(radial, 20% 30%, 20, 40% 30%, 100, from(#ED5F51), to(#DF2228));
+}
+.red2 {
+	z-index: 9;
+	width: 160px;
+	height: 80px;
+	top: 50px;
+	left: 18px;
+	-webkit-transform: rotate(60deg);
+	background: -webkit-gradient(radial, 30% 0, 30, 40% 30%, 60, from(#E54745), to(#E12F35));
+}
+.yellow {
+	z-index: 5;
+	width: 200px;
+	height: 210px;
+	opacity: 0.94;
+	top: 95px;
+	right: -30px;
+	border-top-left-radius: 30px;
+	background: -webkit-gradient(radial, 30% 40%, 130, 40% 20%, 60, from(#DBA328), to(#FDD207));
+
+}
+.green {
+	z-index: 7;
+	width: 200px;
+	height: 210px;
+	opacity: 0.94;
+	top: 82px;
+	left: -25px;
+	-webkit-transform: rotate(117deg);
+	border-top-left-radius: 30px;
+	background: -webkit-gradient(radial, 30% 40%, 120, 30% 40%, 60, from(#419643), to(#4DB749));
+}
+.mask-red {
+	z-index: 8;
+	height: 40px;
+	width: 110px;
+	top: 60px;
+	left: 25px;
+	-webkit-transform: rotate(50deg);
+	background: #E12F35;
+}
+.mask-yellow {
+	z-index: 4;
+	width: 110px;
+	height: 110px;
+	background: #fff;
+	top: 105px;
+	right: -10px;
+	-webkit-transform: rotate(-12deg);
+}
+.mask-green {
+	z-index: 6;
+	width: 110px;
+	height: 110px;
+	background: #fff;
+	top: 185px;
+	left: 38px;
+	-webkit-transform: rotate(15deg);
+}
