@@ -1,14 +1,23 @@
 window.onload = function() {
+	var game;
 	document.getElementsByTagName('button')[0].onclick = function() {
-		init('ball');
+		game = init();
+	}
+	document.onkeyup = function(event) {
+		if (event.keyCode === 187) {
+			game.faster();
+		}
+		if (event.keyCode === 189) {
+			game.slower();
+		}
 	}
 }
 
 
-function init(id) {
+function init() {
 	var iSpeedX = 5;
 	var iSpeedY = 5;
-	var ball = document.getElementById(id);
+	var ball = document.getElementById('ball');
 	var block = document.getElementById('block');
 	document.getElementsByTagName('button')[0].style.display = 'none';
 	ball.style.display = 'block';
@@ -30,16 +39,16 @@ function init(id) {
 			}
 		}
 
-		if (t >= document.documentElement.clientHeight - ball.offsetHeight) {
+		if (t > document.documentElement.clientHeight - ball.offsetHeight) {
 			clearInterval(init);
 			alert('Game Over!');
-		} else if (t <= 0) {
+		} else if (t < 0) {
 			iSpeedY *= -1;
 		}
 
-		if (l >= document.documentElement.clientWidth - ball.offsetWidth) {
+		if (l > document.documentElement.clientWidth - ball.offsetWidth) {
 			iSpeedX *= -1;
-		} else if (l <= 0) {
+		} else if (l < 0) {
 			iSpeedX *= -1;
 		}
 
@@ -47,5 +56,18 @@ function init(id) {
 		ball.style.top = t + 'px';
 	}, 20);
 
+	return {
+		getSpeed: function() {
+			return iSpeedX;
+		},
+		faster: function() {
+			iSpeedX *= 2;
+			iSpeedY *= 2;
+		},
+		slower: function() {
+			iSpeedX *= 0.5;
+			iSpeedY *= 0.5;
+		},
+	}
 
 }
