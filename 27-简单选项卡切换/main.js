@@ -22,11 +22,11 @@ window.onload = function() {
         oLi[index].className = "cur";
         clearInterval(timer);
         timer = setInterval(function() {
-                alpha += 2;
-                alpha > 100 && (alpha = 100);
-                aCon[index].style.opacity = alpha / 100;
-                aCon[index].style.filter = "alpha(opacity=" + alpha + ")";
-                alpha == 100 && clearInterval(timer);
-            },5)
+            alpha += 2;
+            alpha > 100 && (alpha = 100);
+            aCon[index].style.opacity = alpha / 100;
+            aCon[index].style.filter = "alpha(opacity=" + alpha + ")";
+            alpha == 100 && clearInterval(timer);
+        }, 5)
     }
 }
