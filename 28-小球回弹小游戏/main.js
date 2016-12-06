@@ -61,12 +61,16 @@ function init() {
 			return iSpeedX;
 		},
 		faster: function() {
-			iSpeedX *= 2;
-			iSpeedY *= 2;
+			iSpeedX = iSpeedX > 0 ? iSpeedX + 2 : iSpeedX - 2;
+			iSpeedY = iSpeedY > 0 ? iSpeedY + 2 : iSpeedY - 2;
 		},
 		slower: function() {
-			iSpeedX *= 0.5;
-			iSpeedY *= 0.5;
+			if (iSpeedX > 5 || iSpeedX < -5) {
+				iSpeedX = iSpeedX > 0 ? iSpeedX - 2 : iSpeedX + 2;
+			}
+			if (iSpeedY > 5 || iSpeedY < -5) {
+				iSpeedY = iSpeedY > 0 ? iSpeedY - 2 : iSpeedY + 2;
+			}
 		},
 	}
 
