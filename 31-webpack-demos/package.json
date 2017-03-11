@@ -9,6 +9,16 @@
   "author": "zoubingwu",
   "license": "MIT",
   "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.4.0",
+    "babel-preset-latest": "^6.22.0",
+    "css-loader": "^0.27.1",
+    "html-webpack-plugin": "^2.28.0",
+    "node-sass": "^4.5.0",
+    "postcss-loader": "^1.3.3",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.13.2",
     "webpack": "^2.2.1"
   }
 }
