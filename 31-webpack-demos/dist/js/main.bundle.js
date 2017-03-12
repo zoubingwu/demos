@@ -2555,7 +2555,7 @@ Object.defineProperty(exports, 'mapFileCommentRegex', {
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "a40f0b6576952caa3a4b6351d87a1156.png";
+module.exports = __webpack_require__.p + "assets/1-a40f0.png";
 
 /***/ }),
 /* 11 */

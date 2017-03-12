@@ -34,6 +34,9 @@ module.exports = {
             {
                 test:/\.(png|jpg|gif|svg)/,
                 loader: 'file-loader',
+                query: {
+                    name: 'assets/[name]-[hash:5].[ext]'
+                }
             },
             {
                 test: /\.css$/,
