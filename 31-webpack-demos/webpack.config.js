@@ -28,8 +28,12 @@ module.exports = {
                 loader: 'babel-loader',
             },
             {
-                    test: /\.html$/,
-                    loader: 'html-loader',
+                test: /\.html$/,
+                loader: 'html-loader',
+            },
+            {
+                test:/\.(png|jpg|gif|svg)/,
+                loader: 'file-loader',
             },
             {
                 test: /\.css$/,

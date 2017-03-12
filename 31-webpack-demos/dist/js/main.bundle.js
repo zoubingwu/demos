@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 17);
+/******/ 	return __webpack_require__(__webpack_require__.s = 18);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -397,11 +397,11 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _layer = __webpack_require__(10);
+var _layer = __webpack_require__(11);
 
 var _layer2 = _interopRequireDefault(_layer);
 
-__webpack_require__(15);
+__webpack_require__(16);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -577,8 +577,8 @@ function fromByteArray (uint8) {
 
 
 var base64 = __webpack_require__(4)
-var ieee754 = __webpack_require__(11)
-var isArray = __webpack_require__(12)
+var ieee754 = __webpack_require__(12)
+var isArray = __webpack_require__(13)
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -2356,7 +2356,7 @@ function isnan (val) {
   return val !== val // eslint-disable-line no-self-compare
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ }),
 /* 6 */
@@ -2367,7 +2367,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, ".layer {\n  width: 500px;\n  height: 500px; }\n  .layer h1 {\n    color: red;\n    background-color: blue; }\n", ""]);
+exports.push([module.i, ".layer {\n  width: 500px;\n  height: 500px;\n  background-image: url(" + __webpack_require__(10) + "); }\n  .layer h1 {\n    color: red;\n    background-color: blue; }\n", ""]);
 
 // exports
 
@@ -2410,7 +2410,7 @@ exports.push([module.i, "html, body {\n    display: -webkit-box;\n    display: -
 // XXXXX: This file should not exist. Working around a core level bug
 // that prevents using fs at loaders.
 //var fs = require('fs'); // XXX
-var path = __webpack_require__(13);
+var path = __webpack_require__(14);
 
 var commentRx = /^\s*\/(?:\/|\*)[@#]\s+sourceMappingURL=data:(?:application|text)\/json;(?:charset[:=]\S+?;)?base64,(?:.*)$/mg;
 var mapFileCommentRx =
@@ -2553,12 +2553,18 @@ Object.defineProperty(exports, 'mapFileCommentRegex', {
 
 /***/ }),
 /* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "a40f0b6576952caa3a4b6351d87a1156.png";
+
+/***/ }),
+/* 11 */
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"layer\">\n    <h1>this is a layer</h1>\n</div>\n";
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports) {
 
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
@@ -2648,7 +2654,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -2659,7 +2665,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {// Copyright Joyent, Inc. and other Node contributors.
@@ -2887,10 +2893,10 @@ var substr = 'ab'.substr(-1) === 'b'
     }
 ;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(14)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -3076,7 +3082,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -3102,7 +3108,7 @@ if(false) {
 }
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports) {
 
 var g;
@@ -3129,7 +3135,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
