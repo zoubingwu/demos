@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 16);
+/******/ 	return __webpack_require__(__webpack_require__.s = 17);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -397,9 +397,11 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _layer = __webpack_require__(14);
+var _layer = __webpack_require__(10);
 
 var _layer2 = _interopRequireDefault(_layer);
+
+__webpack_require__(15);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -575,8 +577,8 @@ function fromByteArray (uint8) {
 
 
 var base64 = __webpack_require__(4)
-var ieee754 = __webpack_require__(10)
-var isArray = __webpack_require__(11)
+var ieee754 = __webpack_require__(11)
+var isArray = __webpack_require__(12)
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -2354,13 +2356,21 @@ function isnan (val) {
   return val !== val // eslint-disable-line no-self-compare
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16)))
 
 /***/ }),
 /* 6 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: \n.layer {\n       ^\n      Invalid CSS after \".layer {\": expected \"}\", was \"{\"\n      in /Users/bing/demos/31-webpack-demos/src/components/layer/layer.sass (line 1, column 9)");
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, ".layer {\n  width: 500px;\n  height: 500px; }\n  .layer h1 {\n    color: red;\n    background-color: blue; }\n", ""]);
+
+// exports
+
 
 /***/ }),
 /* 7 */
@@ -2400,7 +2410,7 @@ exports.push([module.i, "html, body {\n    display: -webkit-box;\n    display: -
 // XXXXX: This file should not exist. Working around a core level bug
 // that prevents using fs at loaders.
 //var fs = require('fs'); // XXX
-var path = __webpack_require__(12);
+var path = __webpack_require__(13);
 
 var commentRx = /^\s*\/(?:\/|\*)[@#]\s+sourceMappingURL=data:(?:application|text)\/json;(?:charset[:=]\S+?;)?base64,(?:.*)$/mg;
 var mapFileCommentRx =
@@ -2545,6 +2555,12 @@ Object.defineProperty(exports, 'mapFileCommentRegex', {
 /* 10 */
 /***/ (function(module, exports) {
 
+module.exports = "<div class=\"layer\">\n    <h1>this is a layer</h1>\n</div>\n";
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports) {
+
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
   var eLen = nBytes * 8 - mLen - 1
@@ -2632,7 +2648,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -2643,7 +2659,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {// Copyright Joyent, Inc. and other Node contributors.
@@ -2871,10 +2887,10 @@ var substr = 'ab'.substr(-1) === 'b'
     }
 ;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(13)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(14)))
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -3060,7 +3076,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -3075,8 +3091,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../node_modules/css-loader/index.js?importLoaders=1!../../../node_modules/postcss-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!./layer.sass", function() {
-			var newContent = require("!!../../../node_modules/css-loader/index.js?importLoaders=1!../../../node_modules/postcss-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!./layer.sass");
+		module.hot.accept("!!../../../node_modules/css-loader/index.js?importLoaders=1!../../../node_modules/postcss-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!./layer.scss", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js?importLoaders=1!../../../node_modules/postcss-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!./layer.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -3086,7 +3102,7 @@ if(false) {
 }
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports) {
 
 var g;
@@ -3113,7 +3129,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3128,7 +3144,9 @@ var _layer2 = _interopRequireDefault(_layer);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var App = function App() {
-    console.log(_layer2.default);
+    var dom = document.getElementById('app');
+    var layer = new _layer2.default();
+    dom.innerHTML = layer.template;
 };
 
 new App();

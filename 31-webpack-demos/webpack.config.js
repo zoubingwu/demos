@@ -28,6 +28,10 @@ module.exports = {
                 loader: 'babel-loader',
             },
             {
+                    test: /\.html$/,
+                    loader: 'html-loader',
+            },
+            {
                 test: /\.css$/,
                 loader: 'style-loader!css-loader?importLoaders=1!postcss-loader',
             },
